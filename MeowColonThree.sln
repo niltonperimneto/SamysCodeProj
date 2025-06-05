@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeowColonThree", "MeowColonThree.csproj", "{263BB4BC-124F-D557-1185-28026CDB167D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{263BB4BC-124F-D557-1185-28026CDB167D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263BB4BC-124F-D557-1185-28026CDB167D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263BB4BC-124F-D557-1185-28026CDB167D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263BB4BC-124F-D557-1185-28026CDB167D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B2A2E19-DD3D-4625-8532-E47AE14B0636}
+	EndGlobalSection
+EndGlobal

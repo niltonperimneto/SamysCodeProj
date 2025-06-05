@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Listagem de contatos";
+}
+<div class="text-center">
+    <div class="d-grid gap-2 d-md-flex justfy-content-md-start">
+        <a role="button" class="btn btn-primary" asp-controller="Contato" asp-action="Criar" >wanna put a new silly?</a>
+    </div>
+    <br />
+    <h1>list of sillies :333!</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">OWO</th>
+                <th scope="col">uwu</th>
+                <th scope="col">:3:3</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Samy</td>
+                <td>Razielle</td>
+                <td>egg</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-primary" asp-controller="Contato" asp-action="Editar">do u wanna edit this</a>
+                        <a role="button" class="btn btn-danger" asp-controller="Contato" asp-action="ApagarConfirmacao">do u wanna delete this</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Crimmy</td>
+                <td>McCutieface</td>
+                <td>why was the default text here "fat"</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-primary" asp-controller="Contato" asp-action="Editar">do u wanna edit this</a>
+                        <a role="button" class="btn btn-danger" asp-controller="Contato" asp-action="ApagarConfirmacao">do u wanna delete this</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>third thing</td>
+                <td>i ran out of ideas</td>
+                <td>maybe i can do my ocs lmao</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-primary" asp-controller="Contato" asp-action="Editar">do u wanna edit this</a>
+                        <a role="button" class="btn btn-danger" asp-controller="Contato" asp-action="ApagarConfirmacao">do u wanna delete this</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
