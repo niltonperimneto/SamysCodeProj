@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("2a0e98a6-fba2-46b7-93df-fe549612040a")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeowColonThree")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54bf53240d4e7891c4239b217d3284dc741107de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5673982cd74a92146fe16d8292aef9f4411d537a")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeowColonThree")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeowColonThree")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

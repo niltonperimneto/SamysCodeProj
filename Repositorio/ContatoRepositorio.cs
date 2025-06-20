@@ -25,8 +25,8 @@ namespace MeowColonThree.Repositorio
         }
         public ContatoModel Adicionar(ContatoModel contato)
         {
-            _bancoContext.Contatos.Add(contato);
-            _bancoContext.SaveChanges();
+            BancoContext.Contatos.Add(contato);
+            BancoContext.SaveChanges();
             return contato;
             //OKAY THIS IS BIZZARE.
             // a brand new error. took a screen shot and it's sticky notes.
