@@ -15,7 +15,8 @@ namespace MeowColonThree.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            List<ContatoModel> contatos = _contatoRepositorio.BuscarTodos();
+            return View(contatos);
         }
         //Fazendo isso pra ver se resolve
         [HttpGet]
@@ -30,9 +31,15 @@ namespace MeowColonThree.Controllers
             _contatoRepositorio.Adicionar(contato);
             return RedirectToAction("Index");
         }
-        public IActionResult Editar()
+          public IActionResult Alterar(ContatoModel contato)
         {
-            return View();
+            _contatoRepositorio.Atualizar(contato);
+            return RedirectToAction("Index");
+        }
+        public IActionResult Editar(int id)
+        {
+            ContatoModel contato = _contatoRepositorio.ListarPorId(id);
+            return View(contato);
         }
         public IActionResult ApagarConfirmacao()
         {

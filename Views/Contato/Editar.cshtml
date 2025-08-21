@@ -1,23 +1,26 @@
-﻿@{
+﻿@model ContatoModel
+@{
     ViewData["Title"] = "editing more like transitioning :transgenderflag:";
 }
+
 <div class="text center">
-    <h1 class="display-4"> what are we gonna change, bud </h1>
+    <h1 class="display-4"> what are we gonna change, bud. make sure not to make it boobs btw </h1>
 </div>
 
-<form>
+<form asp-controller="Contato" asp-action="Alterar" method="post">
+    <input type="hidden" asp-for="Id" />
     <div class="mb-3">
-        <label for="nome" class="form-label">put the name of the skrunkly</label>
-        <input type="text" class="form-control" placeholder="mrawmramwmrawmrawrawr">
+        <label for="nome" class="form-label">is the name fucky upy rn</label>
+        <input type="text" asp-for="Name" class="form-control" placeholder="mrawmramwmrawmrawrawr">
         <div id="emailHelp" class="form-text">fun fact this used to be a warning about emails not being used and stuff :3.</div>
     </div>
     <div class="mb-3">
-        <label for="email" class="form-label">oh woahgs it's more silly stuff!</label>
-        <input type="text" class="form-control" placeholder="mrrrrpmrmprrmmmmrrrrrppppr">
+        <label for="email" class="form-label">did you think of even SILLIER things</label>
+        <input type="text" asp-for="Email" class="form-control" placeholder="mrrrrpmrmprrmmmmrrrrrppppr">
     </div>
     <div class="mb-3">
-        <label for="celular" class="form-label">sans undertale is so cool :3</label>
-        <input type="text" class="form-control" placeholder="moewomewmoemoewmowemoewmoewomewmoewmoe">
+        <label for="celular" class="form-label">are you going to ignore the warning and are going to change it to be boobs for the funny</label>
+        <input type="text" asp-for="Celular" class="form-control" placeholder="moewomewmoemoewmowemoewmoewomewmoewmoe">
     </div>
 
     <a class="btn btn-secondary" asp-controller="Contato" asp-action="Index" role="button">changed ur mind?</a>

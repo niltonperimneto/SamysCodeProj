@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeowColonThree")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+351bb93fe70cef921c1d7f7be2315a9b23647e9e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+009f7dc4fd37cdd912f9eba53c3e5c1021eb0c8c")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeowColonThree")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeowColonThree")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

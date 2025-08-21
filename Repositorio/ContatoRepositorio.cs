@@ -14,6 +14,9 @@ using MeowColonThree.Models;
 // jogar o codigo la
 // e rezar que funciona
 
+// 12/08/2025
+// ITS FINALYL OVER LETS FOCKEN GOOOOOOOOO
+
 namespace MeowColonThree.Repositorio
 {
     public class ContatoRepositorio : IContatoRepositorio
@@ -42,6 +45,30 @@ namespace MeowColonThree.Repositorio
             // did also find something else out.
             // also put it in the sticky note but
             // i don't have the time to delve too deep into it.
+        }
+
+        public ContatoModel Atualizar(ContatoModel contato)
+        {
+            ContatoModel contatoDB = ListarPorId(contato.Id);
+            if (contatoDB == null) throw new Exception("good luck."); // go figure
+            contatoDB.Name = contato.Name;
+            contatoDB.Email = contato.Email;
+            contatoDB.Celular = contato.Celular;
+
+            _bancoContext.Contatos.Update(contatoDB);
+            _bancoContext.SaveChanges();
+
+            return contatoDB;
+        }
+
+        public List<ContatoModel> BuscarTodos()
+        {
+            return _bancoContext.Contatos.ToList();
+        }
+
+        public ContatoModel ListarPorId(int id)
+        {
+            return _bancoContext.Contatos.FirstOrDefault(x => x.Id == id);
         }
     }
 }

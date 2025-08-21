@@ -1,5 +1,6 @@
-﻿@{
-    ViewData["Title"] = "Listagem de contatos";
+﻿@model List<ContatoModel>
+@{
+    ViewData["Title"] = "i i dont i nwanaw yeah thats it you can thank my teacher for that awesome banger of a title";
 }
 <div class="text-center">
     <div class="d-grid gap-2 d-md-flex justfy-content-md-start">
@@ -18,42 +19,22 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Samy</td>
-                <td>Razielle</td>
-                <td>egg</td>
+            @if (Model != null && Model.Any()) {
+                foreach (var contato in Model){
+                 <tr>
+                <th scope="row">@contato.Id</th>
+                <td>@contato.Name</td>
+                <td>@contato.Email</td>
+                <td>@contato.Celular</td>
                 <td>
                     <div class="btn-group" role="group">
-                        <a role="button" class="btn btn-primary" asp-controller="Contato" asp-action="Editar">do u wanna edit this</a>
-                        <a role="button" class="btn btn-danger" asp-controller="Contato" asp-action="ApagarConfirmacao">do u wanna delete this</a>
+                        <a role="button" class="btn btn-primary" asp-route-itemid="@contato.Id" asp-controller="Contato" asp-action="Editar">do u wanna edit this</a>
+                        <a role="button" class="btn btn-danger" asp-route-itemid="@contato.Id" asp-controller="Contato" asp-action="ApagarConfirmacao">do u wanna delete this</a>
                     </div>
                 </td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Crimmy</td>
-                <td>McCutieface</td>
-                <td>why was the default text here "fat"</td>
-                <td>
-                    <div class="btn-group" role="group">
-                        <a role="button" class="btn btn-primary" asp-controller="Contato" asp-action="Editar">do u wanna edit this</a>
-                        <a role="button" class="btn btn-danger" asp-controller="Contato" asp-action="ApagarConfirmacao">do u wanna delete this</a>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>third thing</td>
-                <td>i ran out of ideas</td>
-                <td>maybe i can do my ocs lmao</td>
-                <td>
-                    <div class="btn-group" role="group">
-                        <a role="button" class="btn btn-primary" asp-controller="Contato" asp-action="Editar">do u wanna edit this</a>
-                        <a role="button" class="btn btn-danger" asp-controller="Contato" asp-action="ApagarConfirmacao">do u wanna delete this</a>
-                    </div>
-                </td>
-            </tr>
+                }
+            }
         </tbody>
     </table>
 </div>
