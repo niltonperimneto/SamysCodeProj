@@ -47,10 +47,20 @@ namespace MeowColonThree.Repositorio
             // i don't have the time to delve too deep into it.
         }
 
+        public bool Apagar(int id)
+        {
+            ContatoModel contatoDB = ListarPorId(id);
+            if (contatoDB == null) throw new Exception("OH NO IT FUCKING BROKE A G A I N");
+            _bancoContext.Contatos.Remove(contatoDB);
+            _bancoContext.SaveChanges();
+
+            return true;
+        }
+
         public ContatoModel Atualizar(ContatoModel contato)
         {
             ContatoModel contatoDB = ListarPorId(contato.Id);
-            if (contatoDB == null) throw new Exception("good luck."); // go figure
+            if (contatoDB == null) throw new Exception("hate let me tell you how much i've come to hate you since i began to liv"); // go figure
             contatoDB.Name = contato.Name;
             contatoDB.Email = contato.Email;
             contatoDB.Celular = contato.Celular;
