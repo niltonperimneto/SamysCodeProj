@@ -6256,24 +6256,25 @@
     ]
   },
   "packageFolders": {
-    "/home/laptop00/.nuget/packages/": {}
+    "/home/laptop01/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/laptop00/SamysCodeProj/MeowColonThree.csproj",
+      "projectUniqueName": "/home/laptop01/SamysCodeProj/MeowColonThree.csproj",
       "projectName": "MeowColonThree",
-      "projectPath": "/home/laptop00/SamysCodeProj/MeowColonThree.csproj",
-      "packagesPath": "/home/laptop00/.nuget/packages/",
-      "outputPath": "/home/laptop00/SamysCodeProj/obj/",
+      "projectPath": "/home/laptop01/SamysCodeProj/MeowColonThree.csproj",
+      "packagesPath": "/home/laptop01/.nuget/packages/",
+      "outputPath": "/home/laptop01/SamysCodeProj/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/laptop00/.nuget/NuGet/NuGet.Config"
+        "/home/laptop01/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "/usr/lib64/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6286,7 +6287,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -6332,6 +6339,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[8.0.19, 8.0.19]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -6340,7 +6353,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.119/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.109/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

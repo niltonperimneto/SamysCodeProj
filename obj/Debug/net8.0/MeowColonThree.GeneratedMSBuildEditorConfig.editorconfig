@@ -17,59 +17,61 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MeowColonThree
 build_property.RootNamespace = MeowColonThree
-build_property.ProjectDir = /home/laptop00/SamysCodeProj/
+build_property.ProjectDir = /home/laptop01/SamysCodeProj/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/laptop00/SamysCodeProj
+build_property.MSBuildProjectDirectory = /home/laptop01/SamysCodeProj
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
-[/home/laptop00/SamysCodeProj/Views/Contato/ApagarConfirmacao.cshtml]
+[/home/laptop01/SamysCodeProj/Views/Contato/ApagarConfirmacao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGF0by9BcGFnYXJDb25maXJtYWNhby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/laptop00/SamysCodeProj/Views/Contato/Criar.cshtml]
+[/home/laptop01/SamysCodeProj/Views/Contato/Criar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGF0by9Dcmlhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/laptop00/SamysCodeProj/Views/Contato/Editar.cshtml]
+[/home/laptop01/SamysCodeProj/Views/Contato/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGF0by9FZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/laptop00/SamysCodeProj/Views/Contato/Index.cshtml]
+[/home/laptop01/SamysCodeProj/Views/Contato/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGF0by9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/laptop00/SamysCodeProj/Views/Home/Index.cshtml]
+[/home/laptop01/SamysCodeProj/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/laptop00/SamysCodeProj/Views/Home/Privacy.cshtml]
+[/home/laptop01/SamysCodeProj/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/laptop00/SamysCodeProj/Views/Page4/Page4.cshtml]
+[/home/laptop01/SamysCodeProj/Views/Page4/Page4.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZTQvUGFnZTQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/laptop00/SamysCodeProj/Views/Shared/Error.cshtml]
+[/home/laptop01/SamysCodeProj/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/laptop00/SamysCodeProj/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/home/laptop01/SamysCodeProj/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/laptop00/SamysCodeProj/Views/_ViewImports.cshtml]
+[/home/laptop01/SamysCodeProj/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/laptop00/SamysCodeProj/Views/_ViewStart.cshtml]
+[/home/laptop01/SamysCodeProj/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/laptop00/SamysCodeProj/Views/Shared/_Layout.cshtml]
+[/home/laptop01/SamysCodeProj/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-vag1yoz0s2

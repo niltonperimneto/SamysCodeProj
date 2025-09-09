@@ -11,14 +11,16 @@
         <label for="nome" class="form-label">hey put the name of the fella here :D</label>
         <input type="text" asp-for="Name" class="form-control" placeholder="mrawmramwmrawmrawrawr">
         <div id="emailHelp" class="form-text">fun fact this used to be a warning about emails not being used and stuff :3.</div>
+        @Html.ValidationMessageFor(x => x.Name)
     </div>
     <div class="mb-3">
         <label for="email" class="form-label">oh woahgs it's more silly stuff!</label>
         <input type="text" asp-for="Email" class="form-control" placeholder="mrrrrpmrmprrmmmmrrrrrppppr">
-    </div>
+        @Html.ValidationMessageFor(x => x.Email)
     <div class="mb-3">
         <label for="celular" class="form-label">sans undertale is so cool :3</label>
         <input type="text" asp-for="Celular" class="form-control" placeholder="moewomewmoemoewmowemoewmoewomewmoewmoe">
+        @Html.ValidationMessageFor(x => x.Celular)
     </div>
 
     <a class="btn btn-secondary" asp-controller="Contato" asp-action="Index" role="button">changed ur mind?</a>
