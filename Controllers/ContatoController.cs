@@ -48,13 +48,23 @@ namespace MeowColonThree.Controllers
         }
         public IActionResult Alterar(ContatoModel contato)
         {
-            if (ModelState.IsValid)
+            try
             {
+                if (ModelState.IsValid)
+                {
                 _contatoRepositorio.Atualizar(contato);
+                TempData["MensagemSucesso"] = "congratulations you are now a parent AGAIN!!!!";
+                return RedirectToAction("Index");
+                }
+
+                return View("Editar", contato);
+            }
+            catch (System.Exception err)
+            {
+                TempData["MensagemErro"] = $"oh shit. {err.Message}";
                 return RedirectToAction("Index");
             }
 
-            return View("Editar", contato);
         }
         public IActionResult Editar(int id)
         {
@@ -68,8 +78,21 @@ namespace MeowColonThree.Controllers
         }
         public IActionResult Apagar(int id)
         {
-            _contatoRepositorio.Apagar(id);
-            return RedirectToAction("Index");
+            try
+            {
+                bool apagado = _contatoRepositorio.Apagar(id);
+                if (apagado)
+                    TempData["MensagemSucesso"] = "Yayyyy, you just did a murder!!!!";
+                else
+                    TempData["MensagemErro"] = "BUT THE EARTH REFUSED TO DIE.";
+
+                return RedirectToAction("Index");
+            }
+            catch (System.Exception err)
+            {
+                TempData["MensagemErro"] = $"oh no. {err.Message}";
+                return RedirectToAction("Index");
+            }
         }
     }
 }
