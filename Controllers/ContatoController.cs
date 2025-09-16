@@ -28,9 +28,19 @@ namespace MeowColonThree.Controllers
         [HttpPost]
         public IActionResult Criar(ContatoModel contato)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _contatoRepositorio.Adicionar(contato);
+                if (ModelState.IsValid)
+                {
+                    _contatoRepositorio.Adicionar(contato);
+                    TempData["MensagemSucesso"] = "yayyyy you are now a parent!!!";
+                    return RedirectToAction("Index");
+                }
+
+            }
+            catch (System.Exception err)
+            {
+                TempData["MensagemErro"] = $"oh fuck. {err.Message}";
                 return RedirectToAction("Index");
             }
 

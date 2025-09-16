@@ -13,7 +13,7 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem #ffabab, 0 0 0 0.25rem #ffa0a0;
+  box-shadow: 0 0 0 0.1rem rgb(255, 171, 171), 0 0 0 0.25rem #ffa0a0;
 }
 
 html {
@@ -31,5 +31,14 @@ body {
 }
 
 header {
-  background-color: lightcyan;
+  background-color: rgb(227, 139, 235);
+}
+
+.close-alert {
+  position: absolute;
+  right: -10px;
+  top: -15px;
+  border-radius: 15px;
+  width: 128px;
+  height: 31px;
 }
