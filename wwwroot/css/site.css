@@ -1,3 +1,4 @@
+@import "cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css";
 @import "tailwindcss";
 @plugin "daisyui";
 
