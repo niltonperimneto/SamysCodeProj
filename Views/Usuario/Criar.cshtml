@@ -22,7 +22,15 @@
         <label for="celular" class="form-label">sans undertale is so cool :3</label>
         <input type="text" asp-for="Login" class="form-control" placeholder="moewomewmoemoewmowemoewmoewomewmoewmoe">
         @Html.ValidationMessageFor(x => x.Login)
-    </div>
+    <div class="mb-3">
+        <label for="celular" class="form-label">Sassy W0w0</label>
+        <input type="password" asp-for="Login" class="form-control" placeholder="Sassy W0w0">
+        @Html.ValidationMessageFor(x => x.Senha)
+
+<!-- We are missing the password element and probably also on the repository, maybe it's good to have a look there
+double check it, it is an easy fix -->
+
+
     <div class="form-group mb-3">
         <label for="perfil">are we making a god or just a plebian</label>
         <select asp-for="Perfil" class="form-control">
