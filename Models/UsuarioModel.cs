@@ -1,7 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using MeowColonThree.Enuns;
 
 namespace MeowColonThree.Models
 {
+    [Table("Usuarios")]
     public class UsuarioModel
     {
         public int Id { get; set; }

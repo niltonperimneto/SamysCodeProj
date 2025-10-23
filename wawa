@@ -1,7 +1,26 @@
-okay so we are going to ignore this but
-for some fucking reason we don't know what the word number 3 is.
-we're not going to fix it if the user wants to know what the number 3 is they can learn it themselves.
-anyways the current goal is:
-manually copy the stupid fucking piece of shit code that's on page 119 of evoluas thing
-and then change it to be actually cute and cool
-sidenote wait
+16/10/2025
+
+alright, so. i'm assuming you read these notes too when trying to fix things that are borked?
+anyways, the problems might not be the stupid, enum enun bullshit
+that might be me making myself confused.
+and for the record, the problem is, according to the code itself,
+"The name 'PerfilEnum' does not exist in the current context"
+which should be checked up on PerfilEnums.cs, i think.
+don't take my word as gospel though.
+
+21/10/2025
+shit is still fucked, gang!
+i did also figure something out which is really choking my motivation
+apperently, the next step after this thing is delt with
+is to try to customize something so THAT works properly
+but the THING IS.
+EVOLUA SKIPS IT, SO WE ARE LEFT IN THE DARK ABOUT THIS!!!!!!
+i'm going to kill something. somethings life ends with ME.
+on the plus side the ai that keeps trying to help me is kinda funny
+its as suicidal as we are :D'
+sidenote, what is with this stupid ' changing the color of the text anyways'
+if i knew how to do it on purpose it'd be permanently be purple
+but i don't so it just swaps to red every time the ' symbol shows up.'
+fun.
+
+23/10/2025

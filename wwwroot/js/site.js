@@ -2,7 +2,12 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 $(document).ready(function () {
-    $('#tabela-contatos').DataTable({
+    getDatatable('#tabela-contatos');
+    getDatatable('#tabela-usuarios')
+});
+
+function getDatatable(id) {
+        $(id).DataTable({
         "ordering": true,
         "searching": true,
         "paging": true,
@@ -30,7 +35,7 @@ $(document).ready(function () {
             }
         }
     });
-});
+}
 
 $('.close-alert').click(function () {
     $('.alert').hide('hide');

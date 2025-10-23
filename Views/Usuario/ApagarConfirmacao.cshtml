@@ -1,0 +1,15 @@
+﻿@model ContatoModel
+@{
+    ViewData["Title"] = "Hey wait buddy are you sure";
+}
+
+<div class="text-center">
+    <h3>idk if u know this, these things can feel pain. only delete them if you're SURE.</h3>
+    </div>
+<div class="text-center">
+    are you sure you want to delete (@Model.Name)?
+    </div>
+<div class="text-center">
+    <a class="btn btn-primary" role="button" asp-controller="Contato" asp-action="Index">spare!!!!!</a>
+    <a class="btn btn-danger" role="button" asp-controller="Contato" asp-route-id="@Model.Id" asp-action="Apagar">KILL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</a>
+    </div>
