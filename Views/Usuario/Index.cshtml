@@ -26,6 +26,9 @@
     <br />
     <h1>look it's another listtt!</h1>
     <table class="display" id="tabela-contatos">
+     <!-- this is fucking stupid.
+     what the fuck is the ai on- whatever not important
+      anyways, keep in MIND, this contatos needs to stay because it seems to be what keeps the tables stable and alive.-->
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -47,8 +50,8 @@
                 <td>@usuario.DataCadastro</td>
                 <td>
                     <div class="btn-group" role="group">
-                        <a role="button" class="btn btn-primary" asp-route-id="@usuario.Id" asp-controller="Contato" asp-action="Editar">do u wanna edit this</a>
-                        <a role="button" class="btn btn-danger" asp-route-id="@usuario.Id" asp-controller="Contato" asp-action="ApagarConfirmacao">do u wanna delete this</a>
+                        <a role="button" class="btn btn-primary" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="Editar">do u wanna edit this</a>
+                        <a role="button" class="btn btn-danger" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="ApagarConfirmacao">do u wanna delete this</a>
                     </div>
                 </td>
             </tr>

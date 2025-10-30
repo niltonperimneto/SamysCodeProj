@@ -8,3 +8,4 @@ namespace MeowColonThree.Enuns
 /* gamers what the fuck */
 // my brother in christ what the FUCK do you mean "Doesnt exist in the current context"
 // suck my dick
+//LOOK I KNEW MORE THAN THE TEACHER >:D

@@ -1,47 +1,50 @@
 ﻿@using MeowColonThree.Enuns
 @model UsuarioModel
+
 @{
     ViewData["Title"] = "woahgsss!!!";
 }
-<div class="text center">
+<div class="text-center">
     <h1 class="display-4">aight who we adding?</h1>
 </div>
 
 <form asp-controller="Usuario" asp-action="Criar" method="post">
     <div class="mb-3">
         <label for="nome" class="form-label">hey put the name of the fella here :D</label>
-        <input type="text" asp-for="Name" class="form-control" placeholder="mrawmramwmrawmrawrawr">
+        <input type="text" asp-for="Name" class="form-control" placeholder="mrawmramwmrawmrawrawr" />
         <div id="emailHelp" class="form-text">fun fact this used to be a warning about emails not being used and stuff :3.</div>
         @Html.ValidationMessageFor(x => x.Name)
     </div>
+
     <div class="mb-3">
         <label for="email" class="form-label">oh woahgs it's more silly stuff!</label>
-        <input type="text" asp-for="Email" class="form-control" placeholder="mrrrrpmrmprrmmmmrrrrrppppr">
+        <input type="text" asp-for="Email" class="form-control" placeholder="mrrrrpmrmprrmmmmrrrrrppppr" />
         @Html.ValidationMessageFor(x => x.Email)
+    </div>
+
     <div class="mb-3">
-        <label for="celular" class="form-label">sans undertale is so cool :3</label>
-        <input type="text" asp-for="Login" class="form-control" placeholder="moewomewmoemoewmowemoewmoewomewmoewmoe">
+        <label for="login" class="form-label">sans undertale is so cool :3</label>
+        <input type="text" asp-for="Login" class="form-control" placeholder="moewomewmoemoewmowemoewmoewomewmoewmoe" />
         @Html.ValidationMessageFor(x => x.Login)
+    </div>
+
     <div class="mb-3">
-        <label for="celular" class="form-label">Sassy W0w0</label>
-        <input type="password" asp-for="Login" class="form-control" placeholder="Sassy W0w0">
+        <label for="senha" class="form-label">Sassy W0w0</label>
+        <input type="password" asp-for="Senha" class="form-control" placeholder="Sassy W0w0" />
         @Html.ValidationMessageFor(x => x.Senha)
-
-<!-- We are missing the password element and probably also on the repository, maybe it's good to have a look there
-double check it, it is an easy fix -->
-
+    </div>
 
     <div class="form-group mb-3">
         <label for="perfil">are we making a god or just a plebian</label>
         <select asp-for="Perfil" class="form-control">
-            <option value="0">april fools</option>
-            <!-- alright gamers, we have found a fuck up-->
-            <option value="@PerfilEnums.Adm" >these are all value 0</option>
-            <!-- for whatever reason,  PerfilEnum just doesn't fucking exist???? 
-            does it just not know that it does? i dont really have a clue on what could fix this.
-            huh? where did the error go?????-->
-            <option value="@PerfilEnums.Padrao" >the illusion of choice</option>
+            <option value="">choose it idiot</option> 
+            <!-- this field above does not relate to anything under UsuarioRepositorio, we should change it here or change something there 
+            thank you past teacher very cool :thumbsup:-->
+            <option value="@( (int)PerfilEnums.Adm )">i am admin</option>
+            <option value="@( (int)PerfilEnums.Padrao )">not an admin waaaaaa</option>
         </select>
+        @Html.ValidationMessageFor(x => x.Perfil)
+    </div>
 
     <a class="btn btn-secondary" asp-controller="Usuario" asp-action="Index" role="button">changed ur mind?</a>
     <button type="submit" class="btn btn-primary">make the skrunkly realll!!!!</button>

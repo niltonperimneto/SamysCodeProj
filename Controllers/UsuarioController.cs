@@ -76,6 +76,10 @@ namespace MeowColonThree.Controllers
             UsuarioModel Usuario = _UsuarioRepositorio.ListarPorId(id);
             return View(Usuario);
         }
+        // i thought of something.
+        // both indexes, criar, editar etc are all named the same.
+        // what if the problem is that it gets confused on which one it sends to?
+        
         public IActionResult Apagar(int id)
         {
             try
