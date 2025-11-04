@@ -1,10 +1,9 @@
-﻿using MeowColonThree.Data;
-using MeowColonThree.Migrations;
+using MeowColonThree.Data;
 using MeowColonThree.Models;
 
 // alright so things are probably going to be uh.
 // borked. like royally fucking borked.
-// 
+//
 
 namespace MeowColonThree.Repositorio
 {
