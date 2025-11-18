@@ -1,4 +1,5 @@
-﻿@model UsuarioModel
+﻿@using MeowColonThree.Enuns
+@model UsuarioModel
 @{
     ViewData["Title"] = "editing more like transitioning 🏳️‍⚧️";
 }
@@ -25,13 +26,17 @@
         <input type="text" asp-for="Login" class="form-control" placeholder="moewomewmoemoewmowemoewmoewomewmoewmoe">
         @Html.ValidationMessageFor(x => x.Login)
     </div>
-        <div class="mb-3">
-        <label for="senha" class="form-label">don't make the password penis they'd guess it too easily. make it be balls.</label>
-        <input type="text" asp-for="Senha" class="form-control" placeholder="moewomewmoemoewmowemoewmoewomewmoewmoe">
-        @Html.ValidationMessageFor(x => x.Senha)
+     <div class="form-group mb-3">
+        <label for="perfil">is it god or is it not god decide already fucker</label>
+        <select asp-for="Perfil" class="form-control">
+            <option value="">choose it idiot</option> 
+            <!-- this field above does not relate to anything under UsuarioRepositorio, we should change it here or change something there 
+            thank you past teacher very cool :thumbsup:-->
+            <option value="@( (int) PerfilEnums.Adm )">i am admin</option>
+            <option value="@( (int) PerfilEnums.Padrao )">not an admin waaaaaa</option>
+        </select>
+        @Html.ValidationMessageFor(x => x.Perfil)
     </div>
-    
-
     <a class="btn btn-secondary" asp-controller="Usuario" asp-action="Index" role="button">changed ur mind?</a>
     <button type="submit" class="btn btn-primary">silly has been modified :3</button>
 </form>

@@ -1,5 +1,4 @@
 ﻿using MeowColonThree.Data;
-using MeowColonThree.Migrations;
 using MeowColonThree.Models;
 
 // alright so things are probably going to be uh.

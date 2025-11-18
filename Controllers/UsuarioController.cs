@@ -46,6 +46,7 @@ namespace MeowColonThree.Controllers
 
             return View(Usuario);
         }
+        [HttpPost]
         public IActionResult Alterar(UsuarioModel Usuario)
         {
             try
