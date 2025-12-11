@@ -5,17 +5,18 @@
 
 <div class="container mx-auto p-4 space-y-6">
     <div class="flex justify-start">
-        <a role="button" class="btn btn-primary rounded-full shadow-md" asp-controller="Contato" asp-action="Criar">wanna put a new silly?</a>
+        <a role="button" class="btn btn-primary rounded-none shadow-md" asp-controller="Contato"
+            asp-action="Criar">wanna put a new silly?</a>
     </div>
 
-    @if(TempData["MensagemSucesso"] != null)
+    @if (TempData["MensagemSucesso"] != null)
     {
         <div class="alert alert-info shadow-lg">
             <span>@TempData["MensagemSucesso"]</span>
             <button type="button" class="btn btn-ghost btn-xs" aria-label="Close">(,,•ω•,,)♡</button>
         </div>
     }
-    @if(TempData["MensagemErro"] != null)
+    @if (TempData["MensagemErro"] != null)
     {
         <div class="alert alert-error shadow-lg">
             <span>@TempData["MensagemErro"]</span>
@@ -24,7 +25,7 @@
     }
 
     <h1 class="text-3xl font-bold text-primary">list of sillies :333!</h1>
-    
+
     <div class="overflow-x-auto bg-base-100 rounded-box shadow-xl p-2">
         <table class="table table-zebra w-full" id="tabela-contatos">
             <thead>
@@ -37,8 +38,10 @@
                 </tr>
             </thead>
             <tbody>
-                @if (Model != null && Model.Any()) {
-                    foreach (var contato in Model){
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var contato in Model)
+                    {
                         <tr class="hover">
                             <th scope="row">@contato.Id</th>
                             <td class="font-bold">@contato.Name</td>
@@ -46,8 +49,10 @@
                             <td>@contato.Celular</td>
                             <td>
                                 <div class="join">
-                                    <a role="button" class="btn btn-primary btn-sm join-item" asp-route-id="@contato.Id" asp-controller="Contato" asp-action="Editar">edit</a>
-                                    <a role="button" class="btn btn-error btn-sm join-item" asp-route-id="@contato.Id" asp-controller="Contato" asp-action="ApagarConfirmacao">delete</a>
+                                    <a role="button" class="btn btn-primary btn-sm join-item" asp-route-id="@contato.Id"
+                                        asp-controller="Contato" asp-action="Editar">edit</a>
+                                    <a role="button" class="btn btn-error btn-sm join-item" asp-route-id="@contato.Id"
+                                        asp-controller="Contato" asp-action="ApagarConfirmacao">delete</a>
                                 </div>
                             </td>
                         </tr>
