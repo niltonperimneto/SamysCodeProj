@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en" data-theme="kawaii">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,56 +8,100 @@
     <link rel="stylesheet" href="~/css/output.css" />
     <link rel="stylesheet" href="~/MeowColonThree.styles.css" asp-append-version="true" />
 </head>
-<body class="min-h-screen flex flex-col font-ascii">
-    <header>
-        <div class="navbar bg-base-100 shadow-lg rounded-b-box mb-4">
-            <div class="flex-1">
-                <a class="btn btn-ghost text-xl text-primary" asp-area="" asp-controller="Home" asp-action="Index">Mrrrrp mrawww meow</a>
-            </div>
-            <div class="flex-none">
-                <ul class="menu menu-horizontal px-1 gap-2">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-sm btn-outline btn-secondary">the default page</a></li>
-                    <li><a asp-area="" asp-controller="Contato" asp-action="Index" class="btn btn-sm btn-outline btn-accent">the fockennnnn list</a></li>
-                    <li><a asp-area="" asp-controller="Usuario" asp-action="Index" class="btn btn-sm btn-outline btn-info">the third one!!!!!</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    
-    <div class="container mx-auto px-4 flex-grow">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="footer items-center p-4 bg-neutral text-neutral-content rounded-t-box mt-auto">
-        <div class="items-center grid-flow-col">
-            <p>&copy; 2025 - Meowowowowowow</p>
+<body class="min-h-screen font-ascii bg-base-100 text-base-content">
+    <div class="drawer lg:drawer-open">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content flex flex-col min-h-screen">
+            <!-- Navbar / Header for Mobile -->
+            <div class="w-full navbar bg-base-100 lg:hidden shadow-sm">
+                <div class="flex-none">
+                    <label for="my-drawer-2" aria-label="open sidebar" class="btn btn-square btn-ghost">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            class="inline-block w-6 h-6 stroke-current">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </label>
+                </div>
+                <div class="flex-1 px-2 mx-2 text-xl font-bold text-primary">Mrrrrp mrawww :3</div>
+            </div>
+
+            <!-- Page Content -->
+            <div class="flex-grow p-4 md:p-8">
+                @RenderBody()
+            </div>
+
+            <footer class="footer items-center p-4 bg-neutral text-neutral-content mt-auto">
+                <aside class="items-center grid-flow-col">
+                    <p>&copy; 2025 - Meowowowowowow</p>
+                </aside>
+            </footer>
         </div>
-    </footer>
+        <div class="drawer-side z-50">
+            <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content flex flex-col gap-2">
+                <!-- Sidebar Header -->
+                <li class="mb-4 text-center">
+                    <a class="text-2xl font-bold text-primary justify-center hover:bg-transparent" asp-area=""
+                        asp-controller="Home" asp-action="Index">
+                        Mrrrrp mrawww
+                    </a>
+                </li>
+
+                <!-- Navigation Links -->
+                <li><a asp-area="" asp-controller="Home" asp-action="Index"
+                        class="btn btn-sm btn-ghost justify-start content-center uppercase font-bold tracking-widest text-secondary hover:text-base-100 hover:bg-secondary">the
+                        default page</a></li>
+                <li><a asp-area="" asp-controller="Contato" asp-action="Index"
+                        class="btn btn-sm btn-ghost justify-start content-center uppercase font-bold tracking-widest text-accent hover:text-base-100 hover:bg-accent">the
+                        fockennnnn list</a></li>
+                <li><a asp-area="" asp-controller="Usuario" asp-action="Index"
+                        class="btn btn-sm btn-ghost justify-start content-center uppercase font-bold tracking-widest text-info hover:text-base-100 hover:bg-info">the
+                        third one!!!!!</a></li>
+
+                <div class="divider"></div>
+
+                <!-- Theme Controller -->
+                <li class="mt-auto">
+                    <label class="flex cursor-pointer gap-2 items-center justify-center p-2">
+                        <span class="label-text text-xs font-bold uppercase">Kawaii</span>
+                        <input type="checkbox" value="synthwave"
+                            class="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />
+                        <span class="label-text text-xs font-bold uppercase">Synthwave</span>
+                    </label>
+                </li>
+            </ul>
+
+        </div>
+    </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <!-- DataTables might need consistent styling or removal if conflicts, keeping for now but might look odd -->
-    <script src="https://cdn.datatables.net/v/dt/dt-2.3.4/datatables.min.js" integrity="sha384-X2pTSfom8FUa+vGQ+DgTCSyBZYkC1RliOduHa0X96D060s7Q//fnOh3LcazRNHyo" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/v/dt/dt-2.3.4/datatables.min.js"
+        integrity="sha384-X2pTSfom8FUa+vGQ+DgTCSyBZYkC1RliOduHa0X96D060s7Q//fnOh3LcazRNHyo"
+        crossorigin="anonymous"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
-    <style>
-        /* Preserved ASCII styles, applied globally but overridden by DaisyUI where needed */
-        body {
-            font-family: "Ascii Art Font", monospace;
-            /* white-space: pre;  <-- Removing this global rule as it breaks flexbox layouts (Navbar). 
+<style>
+    /* Preserved ASCII styles, applied globally but overridden by DaisyUI where needed */
+    body {
+        font-family: "Ascii Art Font", monospace;
+        /* white-space: pre;  <-- Removing this global rule as it breaks flexbox layouts (Navbar). 
                Instead, apply 'whitespace-pre' to specific content containers if needed, 
                or trust that the user means the 'font' mostly. 
                If the user INSISTS on white-space: pre everywhere, the layout will break.
                I'll leave it commented out and rely on the font.
              */
-             font-size: 14px; /* Slightly larger for readability */
-        }
-        /* Specific override for pre-formatted ascii art elements if valid class used */
-        .ascii-art {
-             white-space: pre;
-             line-height: 1.1;
-        }
-    </style>
+        font-size: 14px;
+        /* Slightly larger for readability */
+    }
+
+    /* Specific override for pre-formatted ascii art elements if valid class used */
+    .ascii-art {
+        white-space: pre;
+        line-height: 1.1;
+    }
+</style>

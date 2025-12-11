@@ -20,16 +20,17 @@ module.exports = {
                     "secondary": "#9adbe8", // Cyan-ish
                     "accent": "#ffe484", // Yellow
                     "neutral": "#f3f4f6", // Light Gray
-                    "base-100": "#ffffff", // White
+                    "base-100": "#fff0f5", // Lavender Blush (Pastel Pink)
                     "info": "#93c5fd",
                     "success": "#86efac",
                     "warning": "#fde047",
                     "error": "#fca5a5",
-                    "--rounded-box": "1rem",
-                    "--rounded-btn": "1.9rem",
-                    "--rounded-badge": "1.9rem",
+                    "--rounded-box": "0rem", // Square
+                    "--rounded-btn": "0rem", // Square
+                    "--rounded-badge": "0rem", // Square
                 },
             },
+            "synthwave"
         ],
     },
 }
