@@ -24,7 +24,7 @@ namespace MeowColonThree.Controllers
         {
             return View();
         }
-        //Maybe it just mess things up
+        //Maybe it will just mess things up
         [HttpPost]
         public IActionResult Criar(ContatoModel contato)
         {

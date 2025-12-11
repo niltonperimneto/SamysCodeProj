@@ -1,63 +1,62 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="kawaii">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Meow Mrrp Mrawww :3</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/output.css" />
     <link rel="stylesheet" href="~/MeowColonThree.styles.css" asp-append-version="true" />
-    <link href="https://cdn.datatables.net/v/dt/dt-2.3.4/datatables.min.css" rel="stylesheet" integrity="sha384-pmGS6IIcXhAVIhcnh9X/mxffzZNHbuxboycGuQQoP3pAbb0SwlSUUHn2v22bOenI" crossorigin="anonymous">
- 
 </head>
-<body>
+<body class="min-h-screen flex flex-col font-ascii">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Mrrrrp mrawww meow</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">the default page</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Contato" asp-action="Index">the fockennnnn list</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Index">the third one!!!!!</a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="navbar bg-base-100 shadow-lg rounded-b-box mb-4">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl text-primary" asp-area="" asp-controller="Home" asp-action="Index">Mrrrrp mrawww meow</a>
             </div>
-        </nav>
+            <div class="flex-none">
+                <ul class="menu menu-horizontal px-1 gap-2">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-sm btn-outline btn-secondary">the default page</a></li>
+                    <li><a asp-area="" asp-controller="Contato" asp-action="Index" class="btn btn-sm btn-outline btn-accent">the fockennnnn list</a></li>
+                    <li><a asp-area="" asp-controller="Usuario" asp-action="Index" class="btn btn-sm btn-outline btn-info">the third one!!!!!</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
-    <div class="container">
+    
+    <div class="container mx-auto px-4 flex-grow">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - Meowowowowowow
+    <footer class="footer items-center p-4 bg-neutral text-neutral-content rounded-t-box mt-auto">
+        <div class="items-center grid-flow-col">
+            <p>&copy; 2025 - Meowowowowowow</p>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- DataTables might need consistent styling or removal if conflicts, keeping for now but might look odd -->
     <script src="https://cdn.datatables.net/v/dt/dt-2.3.4/datatables.min.js" integrity="sha384-X2pTSfom8FUa+vGQ+DgTCSyBZYkC1RliOduHa0X96D060s7Q//fnOh3LcazRNHyo" crossorigin="anonymous"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
     <style>
+        /* Preserved ASCII styles, applied globally but overridden by DaisyUI where needed */
         body {
             font-family: "Ascii Art Font", monospace;
-            white-space: pre;
-            font-size: 12px;
-            line-height: 10px;
+            /* white-space: pre;  <-- Removing this global rule as it breaks flexbox layouts (Navbar). 
+               Instead, apply 'whitespace-pre' to specific content containers if needed, 
+               or trust that the user means the 'font' mostly. 
+               If the user INSISTS on white-space: pre everywhere, the layout will break.
+               I'll leave it commented out and rely on the font.
+             */
+             font-size: 14px; /* Slightly larger for readability */
+        }
+        /* Specific override for pre-formatted ascii art elements if valid class used */
+        .ascii-art {
+             white-space: pre;
+             line-height: 1.1;
         }
     </style>

@@ -2,17 +2,16 @@
     ViewData["Title"] = ":egg:";
 }
 
-<div class="flex flex-col items-center text-center mt-10">
-    <h1 class="text-5xl font-bold mb-4">howdyyyyy!!!!</h1>
-    <p class="text-lg max-w-xl">
+<div class="hero min-h-[50vh] bg-base-200 rounded-box mt-10 shadow-xl">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold text-primary">howdyyyyy!!!!</h1>
+      <p class="py-6 text-xl">
         ok so this is the SECOND site i'm making since te first one went to shit whoopsies'
-    </p>
-
-</div>
-<div class="flex flex-col items-center text-center mt-10">
-    <button type="button" class="btn btn-light" asp-controller="Home" asp-area="" asp-action="Privacy" >
-         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">okay what the actual fuck why is there a dot there?????</a>
-        </li>
-    </button>
+      </p>
+      <a class="btn btn-secondary btn-wide rounded-full shadow-md hover:scale-105 transition-transform" asp-controller="Home" asp-action="Privacy">
+        okay what the actual fuck why is there a dot there?????
+      </a>
+    </div>
+  </div>
 </div>
