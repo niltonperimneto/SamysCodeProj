@@ -15,12 +15,12 @@ module.exports = {
     daisyui: {
         themes: [
             {
-                kawaii: {
+                valentine: {
                     "primary": "#ffb1c1", // Pink
                     "secondary": "#9adbe8", // Cyan-ish
                     "accent": "#ffe484", // Yellow
                     "neutral": "#f3f4f6", // Light Gray
-                    "base-100": "#fff0f5", // Lavender Blush (Pastel Pink)
+                    "base-100": "#eb3370ff", // Lavender Blush (Pastel Pink)
                     "info": "#93c5fd",
                     "success": "#86efac",
                     "warning": "#fde047",
