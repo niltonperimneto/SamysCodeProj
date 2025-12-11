@@ -19,7 +19,7 @@ using MeowColonThree.Models;
 
 namespace MeowColonThree.Repositorio
 {
-    public class ContatoRepositorio : IContatoRepositorio
+    public class ContatoRepositorio : IContatoRepositorio // this is new!
     {
         private readonly BancoContext _bancoContext;
         public ContatoRepositorio(BancoContext bancoContext)
@@ -69,6 +69,11 @@ namespace MeowColonThree.Repositorio
             _bancoContext.SaveChanges();
 
             return contatoDB;
+        }
+
+        public void Atualizar()
+        {
+            throw new NotImplementedException();
         }
 
         public List<ContatoModel> BuscarTodos()

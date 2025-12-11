@@ -47,18 +47,31 @@ namespace MeowColonThree.Controllers
             return View(Usuario);
         }
         [HttpPost]
-        public IActionResult Alterar(UsuarioModel Usuario)
+        public IActionResult Alterar(UsuarioSemSenhaModel usuarioSemSenha)
         {
             try
             {
+                UsuarioModel usuario = null;
+
                 if (ModelState.IsValid)
                 {
-                _UsuarioRepositorio.Atualizar(Usuario);
-                TempData["MensagemSucesso"] = "congratulations you are now a parent AGAIN!!!!";
-                return RedirectToAction("Index");
+                    usuario = new UsuarioModel()
+                    {
+                        Id = usuarioSemSenha.Id,
+                        Name = usuarioSemSenha.Name,
+                        Login = usuarioSemSenha.Login,
+                        Email = usuarioSemSenha.Email,
+                        Perfil = (Enuns.PerfilEnums)usuarioSemSenha.Perfil
+                        //  explicit cast was NOT in evolua so.
+                        // i'm trusting the puter here.
+                    };
+
+                    usuario = _UsuarioRepositorio.Atualizar(usuario);
+                    TempData["MensagemSucesso"] = "congratulations you are now a parent AGAIN!!!!";
+                    return RedirectToAction("Index");
                 }
 
-                return View("Editar", Usuario);
+                return View(usuario);
             }
             catch (System.Exception err)
             {

@@ -47,28 +47,20 @@ namespace MeowColonThree.Controllers
             return View(contato);
         }
         [HttpPost]
-        public IActionResult Alterar(UsuarioSemSenhaModel usuarioSemSenha)
+
+       public IActionResult Alterar(ContatoModel contato)
         {
             try
             {
-                UsuarioModel usuario = null;
-
                 if (ModelState.IsValid)
                 {
-                    usuario = new UsuarioModel()
-                    {
-                        Id = usuarioSemSenha.Id,
-                        Name = usuarioSemSenha.Name,
-                        Login = usuarioSemSenha.Login,
-                        Email = usuarioSemSenha.Email,
-                        Perfil = (Enuns.PerfilEnums)usuarioSemSenha.Perfil 
-                        // okie! new problem! this doesn't seem to be TOO hard, we just need to do whatever a cast is. i did  what the programming thing said to do, but it's likely that problems might stir up from this eventually.
-                    };
+                _contatoRepositorio.Atualizar(contato);
 
                     _contatoRepositorio.Atualizar();
                     TempData["MensagemSucesso"] = "congratulations you are now a parent AGAIN!!!!";
                     return RedirectToAction("Index");
                 }
+                // seems to be fine. i don't see any red. might be fixed! we will need to run it ti be sure tho
 
                 return View("Editar", contato);
             }
