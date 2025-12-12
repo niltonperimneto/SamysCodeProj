@@ -7,7 +7,7 @@ $(document).ready(function () {
 });
 
 function getDatatable(id) {
-        $(id).DataTable({
+    $(id).DataTable({
         "ordering": true,
         "searching": true,
         "paging": true,
@@ -18,7 +18,7 @@ function getDatatable(id) {
             "sInfoFiltered": "(Filtrados de _MAX_ registros)",
             "sInfoPostFix": "",
             "sInfoThousands": ".",
-            "sLengthMenu": "_MENU_ number of sillies per page",
+            "sLengthMenu": "_MENU_",
             "sLoadingRecords": "loading...",
             "sProcessing": "blast processing...",
             "sZeroRecords": "everyone is dead :(",
@@ -33,6 +33,29 @@ function getDatatable(id) {
                 "sSortAscending": ": ASCENDING ORDER I HARDLY KNOW ER",
                 "sSortDescending": ": DESCENDING ORDER I HARDLY KNOW ER"
             }
+        },
+        "initComplete": function () {
+            // Find the standard DataTables length menu container
+            var lengthMenu = $(this).closest('.dataTables_wrapper').find('.dataTables_length');
+            var select = lengthMenu.find('select');
+
+            // Create DaisyUI collapse structure
+            var collapse = $('<div class="collapse collapse-arrow bg-primary text-primary-content mb-4 w-52"></div>');
+            var checkbox = $('<input type="checkbox" />');
+            var title = $('<div class="collapse-title text-xl font-medium">number of sillies</div>');
+            var content = $('<div class="collapse-content bg-primary-content text-primary"></div>');
+
+            // Style the select to look nice inside
+            select.addClass('select select-bordered w-full max-w-xs mt-2');
+
+            // Assemble
+            content.append(select);
+            collapse.append(checkbox);
+            collapse.append(title);
+            collapse.append(content);
+
+            // Replace content
+            lengthMenu.html(collapse);
         }
     });
 }

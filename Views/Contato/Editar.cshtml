@@ -9,22 +9,25 @@
 
 <form asp-controller="Contato" asp-action="Alterar" method="post">
     <input type="hidden" asp-for="Id" />
-    <div class="mb-3">
-        <label for="nome" class="form-label">is the name fucky upy rn</label>
-        <input type="text" asp-for="Name" class="form-control" placeholder="mrawmramwmrawmrawrawr">
-        <div id="emailHelp" class="form-text">fun fact this used to be a warning about emails not being used and stuff :3.</div>
-        @Html.ValidationMessageFor(x => x.Name)
-    </div>
-    <div class="mb-3">
-        <label for="email" class="form-label">did you think of even SILLIER things</label>
-        <input type="text" asp-for="Email" class="form-control" placeholder="mrrrrpmrmprrmmmmrrrrrppppr">
-        @Html.ValidationMessageFor(x => x.Email)
-    </div>
-    <div class="mb-3">
-        <label for="celular" class="form-label">are you going to ignore the warning and are going to change it to be boobs for the funny</label>
-        <input type="text" asp-for="Celular" class="form-control" placeholder="moewomewmoemoewmowemoewmoewomewmoewmoe">
-        @Html.ValidationMessageFor(x => x.Celular)
-    </div>
+    <label class="input input-bordered flex items-center gap-2 mb-3">
+        is the name fucky upy rn
+        <input type="text" class="grow" asp-for="Name" placeholder="mrawmramwmrawmrawrawr" />
+    </label>
+    <div id="emailHelp" class="form-text mb-3">fun fact this used to be a warning about emails not being used and stuff
+        :3.</div>
+    @Html.ValidationMessageFor(x => x.Name)
+
+    <label class="input input-bordered flex items-center gap-2 mb-3">
+        did you think of even SILLIER things
+        <input type="text" class="grow" asp-for="Email" placeholder="mrrrrpmrmprrmmmmrrrrrppppr" />
+    </label>
+    @Html.ValidationMessageFor(x => x.Email)
+
+    <label class="input input-bordered flex items-center gap-2 mb-3">
+        are you going to ignore the warning and are going to change it to be boobs for the funny
+        <input type="text" class="grow" asp-for="Celular" placeholder="moewomewmoemoewmowemoewmoewomewmoewmoe" />
+    </label>
+    @Html.ValidationMessageFor(x => x.Celular)
 
     <a class="btn btn-secondary" asp-controller="Contato" asp-action="Index" role="button">changed ur mind?</a>
     <button type="submit" class="btn btn-primary">silly has been modified :3</button>
