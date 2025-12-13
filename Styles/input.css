@@ -1,12 +1,37 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer utilities {
-    .ascii-text {
-        font-family: "Ascii Art Font", monospace;
-        white-space: pre;
-        font-size: 12px;
-        line-height: 10px;
-    }
+@plugin "daisyui" {
+    themes: valentine, synthwave;
+}
+
+@plugin "daisyui/theme" {
+    name: "valentine";
+    default: true;
+    --color-primary: #fc5a80ff;
+    --color-secondary: #02e6ffff;
+    --color-accent: #ffd710ff;
+    --color-neutral: #f3f4f6;
+    --color-base-100: #fff5f7;
+    --color-base-200: #ffe4e6;
+    --color-base-content: #4c0519;
+    --color-info: #0077ffff;
+    --color-success: #86efac;
+    --color-warning: #fde047;
+    --color-error: #fca5a5;
+
+    --radius-box: 0.3rem;
+    --radius-btn: 0.3rem;
+    --radius-badge: 0.5rem;
+}
+
+@theme {
+    --font-ascii: "Courier New", Courier, monospace;
+    --color-kawaii-pink: #ffb1c1;
+}
+
+@utility ascii-text {
+    font-family: var(--font-ascii);
+    white-space: pre;
+    font-size: 12px;
+    line-height: 10px;
 }

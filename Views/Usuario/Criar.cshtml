@@ -9,37 +9,47 @@
 </div>
 
 <form asp-controller="Usuario" asp-action="Criar" method="post">
-    <label class="input input-bordered h-16 text-lg flex items-center gap-2 mb-3">
-        hey put the name of the fella here :D
-        <input type="text" class="grow" asp-for="Name" placeholder="mrawmramwmrawmrawrawr" />
+    <label class="form-control w-full mb-3">
+        <div class="label">
+            <span class="label-text text-lg">hey put the name of the fella here :D</span>
+        </div>
+        <input type="text" class="input input-bordered w-full" asp-for="Name" placeholder="mrawmramwmrawmrawrawr" />
     </label>
     <div id="emailHelp" class="form-text mb-3">fun fact this used to be a warning about emails not being used and stuff
         :3.</div>
     @Html.ValidationMessageFor(x => x.Name)
 
-    <label class="input input-bordered h-16 text-lg flex items-center gap-2 mb-3">
-        oh woahgs it's more silly stuff!
-        <input type="text" class="grow" asp-for="Email" placeholder="mrrrrpmrmprrmmmmrrrrrppppr" />
+    <label class="form-control w-full mb-3">
+        <div class="label">
+            <span class="label-text text-lg">oh woahgs it's more silly stuff!</span>
+        </div>
+        <input type="text" class="input input-bordered w-full" asp-for="Email"
+            placeholder="mrrrrpmrmprrmmmmrrrrrppppr" />
     </label>
     @Html.ValidationMessageFor(x => x.Email)
 
-    <label class="input input-bordered h-16 text-lg flex items-center gap-2 mb-3">
-        sans undertale is so cool :3
-        <input type="text" class="grow" asp-for="Login" placeholder="moewomewmoemoewmowemoewmoewomewmoewmoe" />
+    <label class="form-control w-full mb-3">
+        <div class="label">
+            <span class="label-text text-lg">sans undertale is so cool :3</span>
+        </div>
+        <input type="text" class="input input-bordered w-full" asp-for="Login"
+            placeholder="moewomewmoemoewmowemoewmoewomewmoewmoe" />
     </label>
     @Html.ValidationMessageFor(x => x.Login)
 
-    <label class="input input-bordered h-16 text-lg flex items-center gap-2 mb-3">
-        Sassy W0w0
-        <input type="password" class="grow" asp-for="Senha" placeholder="Sassy W0w0" />
+    <label class="form-control w-full mb-3">
+        <div class="label">
+            <span class="label-text text-lg">Sassy W0w0</span>
+        </div>
+        <input type="password" class="input input-bordered w-full" asp-for="Senha" placeholder="Sassy W0w0" />
     </label>
     @Html.ValidationMessageFor(x => x.Senha)
 
     <label class="form-control w-full mb-3">
         <div class="label">
-            <span class="label-text">are we making a god or just a plebian</span>
+            <span class="label-text text-lg">are we making a god or just a plebian</span>
         </div>
-        <select asp-for="Perfil" class="select select-bordered h-16 text-lg w-full">
+        <select asp-for="Perfil" class="select select-bordered w-full">
             <option value="">choose it idiot</option>
             <option value="@( (int)PerfilEnums.Adm )">i am admin</option>
             <option value="@( (int)PerfilEnums.Padrao )">not an admin waaaaaa</option>
@@ -47,6 +57,8 @@
     </label>
     @Html.ValidationMessageFor(x => x.Perfil)
 
-    <a class="btn btn-secondary" asp-controller="Usuario" asp-action="Index" role="button">changed ur mind?</a>
-    <button type="submit" class="btn btn-primary">make the skrunkly realll!!!!</button>
+    <div class="flex gap-4 mt-4">
+        <a class="btn btn-secondary" asp-controller="Usuario" asp-action="Index" role="button">changed ur mind?</a>
+        <button type="submit" class="btn btn-primary">make the skrunkly realll!!!!</button>
+    </div>
 </form>

@@ -7,26 +7,36 @@
 </div>
 
 <form asp-controller="Contato" asp-action="Criar" method="post">
-    <label class="input input-bordered flex items-center gap-2 mb-3">
-        hey put the name of the fella here :D
-        <input type="text" class="grow" asp-for="Name" placeholder="mrawmramwmrawmrawrawr" />
+    <label class="form-control w-full mb-3">
+        <div class="label">
+            <span class="label-text text-lg">hey put the name of the fella here :D</span>
+        </div>
+        <input type="text" class="input input-bordered w-full" asp-for="Name" placeholder="mrawmramwmrawmrawrawr" />
     </label>
     <div id="emailHelp" class="form-text mb-3">fun fact this used to be a warning about emails not being used and stuff
         :3.</div>
     @Html.ValidationMessageFor(x => x.Name)
 
-    <label class="input input-bordered flex items-center gap-2 mb-3">
-        oh woahgs it's more silly stuff!
-        <input type="text" class="grow" asp-for="Email" placeholder="mrrrrpmrmprrmmmmrrrrrppppr" />
+    <label class="form-control w-full mb-3">
+        <div class="label">
+            <span class="label-text text-lg">oh woahgs it's more silly stuff!</span>
+        </div>
+        <input type="text" class="input input-bordered w-full" asp-for="Email"
+            placeholder="mrrrrpmrmprrmmmmrrrrrppppr" />
     </label>
     @Html.ValidationMessageFor(x => x.Email)
 
-    <label class="input input-bordered flex items-center gap-2 mb-3">
-        sans undertale is so cool :3
-        <input type="text" class="grow" asp-for="Celular" placeholder="moewomewmoemoewmowemoewmoewomewmoewmoe" />
+    <label class="form-control w-full mb-3">
+        <div class="label">
+            <span class="label-text text-lg">sans undertale is so cool :3</span>
+        </div>
+        <input type="text" class="input input-bordered w-full" asp-for="Celular"
+            placeholder="moewomewmoemoewmowemoewmoewomewmoewmoe" />
     </label>
     @Html.ValidationMessageFor(x => x.Celular)
 
-    <a class="btn btn-secondary" asp-controller="Contato" asp-action="Index" role="button">changed ur mind?</a>
-    <button type="submit" class="btn btn-primary">make the skrunkly realll!!!!</button>
+    <div class="flex gap-4 mt-4">
+        <a class="btn btn-secondary" asp-controller="Contato" asp-action="Index" role="button">changed ur mind?</a>
+        <button type="submit" class="btn btn-primary">make the skrunkly realll!!!!</button>
+    </div>
 </form>

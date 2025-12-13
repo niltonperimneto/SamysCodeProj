@@ -3,7 +3,19 @@
 
 $(document).ready(function () {
     getDatatable('#tabela-contatos');
-    getDatatable('#tabela-usuarios')
+    getDatatable('#tabela-usuarios');
+
+    // Theme Persistence Logic
+    const savedTheme = localStorage.getItem('theme') || 'valentine';
+    $('html').attr('data-theme', savedTheme);
+    $('.theme-controller').prop('checked', savedTheme === 'synthwave');
+
+    // Theme Controller Logic
+    $('.theme-controller').change(function () {
+        const theme = this.checked ? 'synthwave' : 'valentine';
+        $('html').attr('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    });
 });
 
 function getDatatable(id) {

@@ -10,39 +10,49 @@
 
 <form asp-controller="Usuario" asp-action="Alterar" method="post">
     <input type="hidden" asp-for="Id" />
-    <label class="input input-bordered h-16 text-lg flex items-center gap-2 mb-3">
-        make the name be penis!
-        <input type="text" class="grow" asp-for="Name" placeholder="mrawmramwmrawmrawrawr" />
+    <label class="form-control w-full mb-3">
+        <div class="label">
+            <span class="label-text text-lg">make the name be penis!</span>
+        </div>
+        <input type="text" class="input input-bordered w-full" asp-for="Name" placeholder="mrawmramwmrawmrawrawr" />
     </label>
     <div id="emailHelp" class="form-text mb-3">fun fact this used to be a warning about emails not being used and stuff
         :3.</div>
     @Html.ValidationMessageFor(x => x.Name)
 
-    <label class="input input-bordered h-16 text-lg flex items-center gap-2 mb-3">
-        make the NOT email penis!!!
-        <input type="text" class="grow" asp-for="Email" placeholder="mrrrrpmrmprrmmmmrrrrrppppr" />
+    <label class="form-control w-full mb-3">
+        <div class="label">
+            <span class="label-text text-lg">make the NOT email penis!!!</span>
+        </div>
+        <input type="text" class="input input-bordered w-full" asp-for="Email"
+            placeholder="mrrrrpmrmprrmmmmrrrrrppppr" />
     </label>
     @Html.ValidationMessageFor(x => x.Email)
 
-    <label class="input input-bordered h-16 text-lg flex items-center gap-2 mb-3">
-        turn the boobs into penis!!!!
-        <input type="text" class="grow" asp-for="Login" placeholder="moewomewmoemoewmowemoewmoewomewmoewmoe" />
+    <label class="form-control w-full mb-3">
+        <div class="label">
+            <span class="label-text text-lg">turn the boobs into penis!!!!</span>
+        </div>
+        <input type="text" class="input input-bordered w-full" asp-for="Login"
+            placeholder="moewomewmoemoewmowemoewmoewomewmoewmoe" />
     </label>
     @Html.ValidationMessageFor(x => x.Login)
 
     <label class="form-control w-full mb-3">
         <div class="label">
-            <span class="label-text">is it god or is it not god decide already fucker</span>
+            <span class="label-text text-lg">is it god or is it not god decide already fucker</span>
         </div>
-        <select asp-for="Perfil" class="select select-bordered h-16 text-lg w-full">
+        <select asp-for="Perfil" class="select select-bordered w-full">
             <option value="">choose it idiot</option>
             <option value="@( (int) PerfilEnums.Adm )">i am admin</option>
             <option value="@( (int) PerfilEnums.Padrao )">not an admin waaaaaa</option>
         </select>
     </label>
     @Html.ValidationMessageFor(x => x.Perfil)
-    <a class="btn btn-secondary" asp-controller="Usuario" asp-action="Index" role="button">changed ur mind?</a>
-    <button type="submit" class="btn btn-primary">silly has been modified :3</button>
+    <div class="flex gap-4 mt-4">
+        <a class="btn btn-secondary" asp-controller="Usuario" asp-action="Index" role="button">changed ur mind?</a>
+        <button type="submit" class="btn btn-primary">silly has been modified :3</button>
+    </div>
 </form>
 <!-- the error isn't in anything, it's HERE.
 for some bizzare reason, apagar confirmacao works FINE

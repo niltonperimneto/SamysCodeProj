@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Meow Mrrp Mrawww :3</title>
     <link rel="stylesheet" href="~/css/output.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/MeowColonThree.styles.css" asp-append-version="true" />
+
 </head>
 
 <body class="min-h-screen font-ascii bg-base-100 text-base-content">
@@ -93,11 +93,30 @@
 
                 <!-- Theme Controller -->
                 <li class="mt-auto">
-                    <label class="flex cursor-pointer gap-2 items-center justify-center p-2">
-                        <span class="label-text text-xs font-bold uppercase">Light</span>
-                        <input type="checkbox" value="synthwave"
-                            class="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />
-                        <span class="label-text text-xs font-bold uppercase">Dark</span>
+                    <label class="toggle text-base-content toggle-xl transform scale-150 origin-bottom-left ml-4 mb-4">
+                        <input type="checkbox" value="synthwave" class="theme-controller" />
+
+                        <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none"
+                                stroke="currentColor">
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <path d="M12 2v2"></path>
+                                <path d="M12 20v2"></path>
+                                <path d="m4.93 4.93 1.41 1.41"></path>
+                                <path d="m17.66 17.66 1.41 1.41"></path>
+                                <path d="M2 12h2"></path>
+                                <path d="M20 12h2"></path>
+                                <path d="m6.34 17.66-1.41 1.41"></path>
+                                <path d="m19.07 4.93-1.41 1.41"></path>
+                            </g>
+                        </svg>
+
+                        <svg aria-label="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none"
+                                stroke="currentColor">
+                                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                            </g>
+                        </svg>
                     </label>
                 </li>
             </ul>
@@ -114,23 +133,4 @@
 </body>
 
 </html>
-<style>
-    /* Preserved ASCII styles, applied globally but overridden by DaisyUI where needed */
-    body {
-        font-family: "Ascii Art Font", monospace;
-        /* white-space: pre;  <-- Removing this global rule as it breaks flexbox layouts (Navbar). 
-               Instead, apply 'whitespace-pre' to specific content containers if needed, 
-               or trust that the user means the 'font' mostly. 
-               If the user INSISTS on white-space: pre everywhere, the layout will break.
-               I'll leave it commented out and rely on the font.
-             */
-        font-size: 14px;
-        /* Slightly larger for readability */
-    }
 
-    /* Specific override for pre-formatted ascii art elements if valid class used */
-    .ascii-art {
-        white-space: pre;
-        line-height: 1.1;
-    }
-</style>

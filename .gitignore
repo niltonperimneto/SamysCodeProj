@@ -2,3 +2,4 @@ bin/*
 obj/*
 Migrations/*
 /obj
+llms.txt
